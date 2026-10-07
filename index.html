@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Profile | Harbin Modern Construction</title>
+  <style>
+    :root {
+      --primary: #0f2942;
+      --secondary: #1a4a7a;
+      --accent: #c05621;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --border: #d0d9e6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      background: linear-gradient(145deg, #0f2942 0%, #1a4a7a 100%);
+      color: #ffffff;
+      padding: 42px 0 36px;
+    }
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+    }
+    header .arabic {
+      font-size: 1.2rem;
+      margin-top: 4px;
+      direction: rtl;
+      opacity: 0.95;
+    }
+    header .tagline {
+      margin-top: 10px;
+      font-size: 0.98rem;
+      opacity: 0.9;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 22px;
+      font-size: 0.9rem;
+    }
+    .meta span {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      opacity: 0.7;
+      margin-bottom: 2px;
+    }
+
+    section {
+      background: var(--card);
+      margin: 20px 0;
+      padding: 28px 26px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(15, 41, 66, 0.06);
+    }
+    h2 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+    }
+    h3 {
+      font-size: 1rem;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+    p { color: var(--text); margin-bottom: 10px; }
+    .muted { color: var(--muted); font-size: 0.92rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: #f0f5fa;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .card h3 { color: var(--primary); }
+
+    .address {
+      background: #e8f5ee;
+      border: 1px solid #a3d9b1;
+      border-radius: 10px;
+      padding: 16px 18px;
+      color: #1a3c2a;
+      font-size: 0.95rem;
+    }
+
+    .person {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .person:last-child { border-bottom: none; }
+    .person strong { color: var(--primary); }
+    .person .role {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .badge {
+      background: #e2eef8;
+      color: #1a4a7a;
+      border: 1px solid #b8d4ec;
+      padding: 5px 12px;
+      border-radius: 16px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    ul { list-style: none; }
+    ul li {
+      padding: 5px 0 5px 18px;
+      position: relative;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #e8eef5;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    td { color: var(--text); }
+
+    .contact-card {
+      background: #f0f5fa;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .contact-card h3 { color: var(--primary); margin-bottom: 8px; }
+    .contact-card a { color: var(--secondary); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 32px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Harbin Modern Construction</h1>
+    <div class="arabic">شركة هربن للإنشاءات الحديثة</div>
+    <div class="tagline">General Contracting · Civil Engineering · Project Controls · Alexandria, Egypt</div>
+    <div class="meta">
+      <div><span>Headquarters</span>Alexandria, Egypt</div>
+      <div><span>Industry</span>General Contracting</div>
+      <div><span>Founder</span>Eng. Ahmed Nabil, GMICE</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <h2>Registered Address</h2>
+    <div class="address">
+      ٢٨ Al Nakib Sharif Ramzi<br>
+      Al Hadrah Qebli, Bab Shar'<br>
+      Alexandria Governorate 5421272, Egypt
+    </div>
+  </section>
+
+  <section>
+    <h2>Company Overview</h2>
+    <p>
+      Harbin Modern Construction is a general contracting and civil engineering firm based in Alexandria, Egypt.
+      The company delivers integrated construction services covering full-scope contracting, structural design,
+      BIM modeling, and project controls with Primavera P6.
+    </p>
+    <p class="muted">
+      Led by Eng. Ahmed Nabil (GMICE, UK · Egyptian Syndicate of Engineers), the firm focuses on precise
+      structural engineering combined with disciplined cost and schedule control from design through handover.
+    </p>
+  </section>
+
+  <section>
+    <h2>Core Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>General Contracting</h3>
+        <p class="muted">Full-scope delivery for residential, commercial, and infrastructure projects — mobilization to handover.</p>
+      </div>
+      <div class="card">
+        <h3>Project Controls</h3>
+        <p class="muted">Primavera P6 CPM scheduling, WBS, Earned Value Management (EVA), and cash-flow forecasting.</p>
+      </div>
+      <div class="card">
+        <h3>BIM &amp; Structural Modeling</h3>
+        <p class="muted">3D Revit modeling, FEM analysis, foundation framing, and rebar detailing.</p>
+      </div>
+      <div class="card">
+        <h3>Structural Analysis</h3>
+        <p class="muted">Robot Structural Analysis, flat-slab punching shear checks, and PLAXIS 3D soil-foundation modeling.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership Team</h2>
+    <div class="person">
+      <strong>Eng. Nabil Hassan</strong>
+      <div class="role">CEO — Structural Engineer</div>
+      <p class="muted">Structural engineering strategy, design integrity, and technical leadership across all projects.</p>
+    </div>
+    <div class="person">
+      <strong>Eng. Ahmed Nabil, GMICE</strong>
+      <div class="role">Founder &amp; General Manager</div>
+      <p class="muted">Civil &amp; Project Controls Engineer. Expertise in Primavera P6, EVA, BIM, and full-scope contracting. Registered with Egyptian Syndicate of Engineers and ICE (UK).</p>
+    </div>
+    <div class="person">
+      <strong>Eng. Youssef Nabil</strong>
+      <div class="role">Co-Founder — Architecture Engineer</div>
+      <p class="muted">Architectural design, spatial planning, and building form coordination.</p>
+    </div>
+    <div class="person">
+      <strong>Eng. Noha Samir Alhaddad</strong>
+      <div class="role">Co-Founder — Structural Engineer</div>
+      <p class="muted">Structural design, analysis, and code-compliant load-bearing systems.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Founder’s Credentials</h2>
+    <p class="muted" style="margin-bottom:12px;">Professional qualifications of Eng. Ahmed Nabil, Founder &amp; General Manager:</p>
+    <ul>
+      <li><strong>GMICE</strong> — Institution of Civil Engineers (UK), October 2025</li>
+      <li><strong>Danish B.Eng. Equivalent</strong> — Danish Agency for Higher Education and Science, February 2026</li>
+      <li><strong>Registered Civil Engineer</strong> — Egyptian Syndicate of Engineers, Alexandria Branch, 2025</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Technical Competencies</h2>
+    <div class="badges">
+      <span class="badge">Primavera P6</span>
+      <span class="badge">Autodesk Revit</span>
+      <span class="badge">Robot Structural Analysis</span>
+      <span class="badge">PLAXIS 3D</span>
+      <span class="badge">AutoCAD</span>
+      <span class="badge">Earned Value Management</span>
+      <span class="badge">Finite Element Analysis</span>
+      <span class="badge">3D Rebar Detailing</span>
+      <span class="badge">CPM Scheduling</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Founder’s Education</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Degree</th>
+          <th>Institution</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>B.Sc. Construction &amp; Building Engineering</td>
+          <td>AASTMT, Alexandria</td>
+          <td>Jan 2025 · GPA 2.9/4.0 · ABET-accredited</td>
+        </tr>
+        <tr>
+          <td>American High School Diploma</td>
+          <td>Alexandria Private Language School</td>
+          <td>Jun 2019 · GPA 3.4/4.0 · SAT 1280</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="contact-card">
+        <h3>Office Address</h3>
+        <p>
+          ٢٨ Al Nakib Sharif Ramzi<br>
+          Al Hadrah Qebli, Bab Shar'<br>
+          Alexandria Governorate 5421272<br>
+          Egypt
+        </p>
+      </div>
+      <div class="contact-card">
+        <h3>Phone &amp; Email</h3>
+        <p>
+          <a href="tel:+201021076604">+20 102 107 6604</a><br>
+          <a href="mailto:mypc1239@outlook.com">mypc1239@outlook.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    Harbin Modern Construction · شركة هربن للإنشاءات الحديثة · Alexandria, Egypt
+  </div>
+</footer>
+
+</body>
+</html>
